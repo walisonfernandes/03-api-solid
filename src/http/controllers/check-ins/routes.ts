@@ -5,7 +5,7 @@ import { create } from './create'
 import { history } from './history'
 import { validate } from './validate'
 import { metrics } from './metrics'
-import { verifyUserRole } from '@/http/middlewares/verify-user-role'
+import { verifyUserRole } from '../../middlewares/verify-user-role'
 
 export async function checkInsRoutes(app: FastifyInstance) {
   app.addHook('onRequest', verifyJWT)
